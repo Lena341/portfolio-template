@@ -1,0 +1,293 @@
+:root
+{
+   --white:#ffffff;
+   --black: #000000;
+}
+
+::selection
+{
+   color: var(--btnFontColor);
+   background-color: var(--btnBg);
+}
+
+body
+{
+    background: var(--bg);
+    color: var(--fontColor);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#btn
+{
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#homeButton:hover, #workButton:hover, #aboutButton:hover, #contactButton:hover, #workLink:hover
+{
+   text-decoration: underline;
+}
+
+.light-theme
+{
+    --bg:var(var(--white));
+    --fontColor:var(--black);
+    --btnBg:var(--black);
+    --btnFontColor:var(--white);
+    --cursorColor:var(--black);
+    --arrowColor:var(--black);
+    --pr1Color:var(--black);
+    --navbg:var(--white);
+    --footerBg:var(--black);
+    --footerFontColor:var(--white);
+}
+
+.dark-theme
+{
+    --bg:var(--black);
+    --fontColor:var(--white);
+    --btnBg:var(--white);
+    --btnFontColor:var(--black);
+    --cursorColor:var(--white);
+    --arrowColor:var(--white);
+    --pr1Color:var(--white);
+    --navbg:var(--black);
+    --footerBg:var(--black);
+    --footerFontColor:var(--white);
+}
+
+#sent1,#sent2,#sent3
+{
+   overflow: hidden;
+   white-space: nowrap;
+   opacity: 0;
+   font-family: 'Archivo', sans-serif;
+   font-size: 45px;
+   font-weight: 900;
+}
+
+#sent1
+{
+   width: 8em;
+   animation: sentence1 4s steps(40,end) 1s 1 normal forwards;
+}
+
+#sent2
+{
+   width: 15em;
+   animation: sentence2 6s steps(60,end) 4s 1 normal forwards;
+}
+
+#sent3
+{
+   width: 7em;
+   animation: sentence3 5s steps(50,end) 9s 1 normal forwards;
+}
+
+#frontPageButton
+{
+   background-color: var(--btnBg); 
+   color: var(--btnFontColor); 
+   margin-top: 120px;
+}
+
+@keyframes sentence1
+{
+   0% {width: 0; opacity: 0;}
+   1% {opacity: 1;}
+   100% {width: 100%; opacity: 1;}
+}
+
+@keyframes sentence2
+{
+   0% {width: 0; opacity: 0;}
+   1% {opacity: 1;}
+   100% {width: 100%; opacity: 1;}
+}
+
+@keyframes sentence3 
+{
+   0% {width: 0; opacity: 0;}
+   1% {opacity: 1;}
+   100% {width: 100%; opacity: 1;}
+}
+
+@keyframes text1 
+{
+   0% {width: 0; opacity: 0;}
+   1% {opacity: 1;}
+   100% {width:100%; opacity: 1;}
+}
+
+@keyframes button1 
+{
+   0% {width: 0; opacity: 0;}
+   1% {opacity: 1;}
+   30% {width:30%; opacity: 1;}
+   to {opacity: 1;}
+}
+
+input[type=text]
+{
+   width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 30px; 
+  margin-top: -1px;
+  box-sizing: border-box;
+  border: none; 
+  border-bottom: 1px solid var(--pr1Color);
+}
+
+#footerBg
+{
+   background-color: var(--footerBg);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: inherit;
+   width: 100%;
+   height: 155px;
+}
+
+.form-floating label
+{
+   color: black !important;
+}
+
+#borderLine
+{
+   border-bottom: 1px; 
+   border-style: solid; 
+   border-color: var(--pr1Color); 
+   width: 90px; 
+   margin-top: 20px;
+}
+
+@media only screen and (min-width:690px)
+{
+   #homePagePhones,#aboutMeSmallScreens,#workSmallScreen,#contactSmallScreen,#wordText,#largeScreenText
+   {
+      display: none;
+   }
+
+   #emailButton
+   {
+      margin-left: 250px;
+   }
+
+   #contactText,#aboutText
+   {
+      font-size: 21.5px;
+   }
+
+   #frontPageButton
+   {
+      background-color: var(--btnBg); 
+      color: var(--btnFontColor); 
+      margin-top: 130px;
+   }
+}
+
+@media only screen and (max-width:1200px)
+{
+   #sent1,#sent2,#sent3
+   {
+      font-size: 45px;
+   }
+}
+
+@media only screen and (max-width:1100px)
+{
+   #sent1,#sent2,#sent3
+   {
+      font-size:45px;
+   }
+}
+
+@media only screen and (max-width:1000px)
+{
+   #sent1,#sent2,#sent3
+   {
+      font-size: 45px;
+   }
+   
+   #about
+   {
+      margin-top: 80px;
+   }
+
+   #arrowDown
+   {
+      margin-top: 150px;
+   }
+}
+
+@media only screen and (max-width:900px)
+{
+   #frontPageLink1,#frontPageLink2,#frontPageLink3
+   {
+      display: none;
+   }
+
+   #sent1,#sent2,#sent3
+   {
+      font-size: 35px;
+   }
+}
+
+@media only screen and (max-width:690px)
+{
+   #sent1
+   {
+      font-size: 55px;
+   }
+
+   #aboutMeLargeScreens,#workLargeScreen,#contactLargeScreen,#sent2,#sent3
+   {
+      display: none;
+   }
+  
+   #contactText
+   {
+      font-size: 15px;
+   }
+
+   #emailButton
+   {
+      margin-left: 20px;
+   }
+
+   #borderLine
+   {
+      border-bottom: 1px; 
+      border-style: solid; 
+      border-color: var(--pr1Color); 
+      margin-top: 20px;
+      width: 100px;
+   }
+
+   #largeScreenText
+   {
+      overflow: hidden;
+      opacity: 0;
+      white-space: nowrap;
+      font-family: 'Archivo', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      padding-top: 60px;
+      animation: text1 4s steps(40,end) 5s 1 normal forwards;
+   }
+
+   #frontPageButton
+   {
+      overflow: hidden;
+      opacity: 0;
+      white-space: nowrap;
+      background-color: var(--btnBg); 
+      color: var(--btnFontColor); 
+      margin-top: 80px;
+      animation: button1 1s steps(40,end) 9s 1 normal forwards;
+   }
+}
