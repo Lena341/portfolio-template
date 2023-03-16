@@ -1,2 +1,2 @@
-# personal-website
-My website
+# Portfolio template
+A black and white version of my portfolio website
